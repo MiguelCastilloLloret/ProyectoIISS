@@ -1,0 +1,24 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Bloc de Notas UCA NodeJS')
+    meta(name='author', content='Francisco Maestre Miguel Castillo')
+    title El Bloc de Notas de la UCA
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='/stylesheets/jumbotron-narrow.css', rel='stylesheet')
+body
+  .container
+      .header
+        ul.nav.nav-pills.pull-right
+          li#inicio
+            a(href='./') Inicio
+          li#nueva
+            a(href='./nueva') Añadir
+          li#acerca
+            a(href='./acerca') Acerca de
+          li#contacto
+            a(href='./contacto') Contacto
+        h3.text-muted El Bloc de Notas UCA
+      block content

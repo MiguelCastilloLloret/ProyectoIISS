@@ -1,0 +1,23 @@
+extends header
+block content
+      .jumbotron
+        h3 Apunta tus notas desde aquí
+        form.form-horizontal(name='commentform', method='post', action='send_form_email.php')
+            .form-group
+              label.control-label.col-md-4(for='autor') Autor
+              .col-md-6
+                input#autor.form-control(type='text', name='autor', placeholder='Nombre del Autor')
+            .form-group
+              label.control-label.col-md-4(for='categoria') Categoria
+              .col-md-6
+                input#categoria.form-control(type='text', name='categoria', placeholder='Categoria')
+            .form-group
+              label.control-label.col-md-4(for='recuadro') Contenido de la Nota
+              .col-md-6
+                textarea#recuadro.form-control(rows='6', name='recuadro', placeholder='Introduce la nota que quieres guardar')
+            .form-group
+              .col-md-6
+                #nueva_frase.a.btn.btn-md.btn-success(href='#', role='button') Añadir nota
+      script(src="/javascripts/jquery.js")
+      script(src="/javascripts/view.nueva.js")
+      include footer

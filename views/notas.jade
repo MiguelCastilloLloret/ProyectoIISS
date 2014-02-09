@@ -1,0 +1,18 @@
+extends header
+block content
+      .jumbotron
+        h3 Categorias
+        .row.marketing
+          .col-lg-3
+              each categoria in categorias
+                  a(class="cat", href='#')
+                    p.
+                      #{categoria}
+
+          .col-lg-9
+            div#right-column
+              h4#seccion(class="text-success")
+              div#frases
+      script(src="/javascripts/jquery.js")
+      script(src="/javascripts/view.notas.js")
+      include footer

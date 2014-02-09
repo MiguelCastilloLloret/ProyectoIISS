@@ -1,0 +1,28 @@
+extends header
+block content
+      .jumbotron
+        .row
+          .col-lg-6
+              img.img-circle(src='./images/foto_paco.png', style='width: 140px; height: 140px;margin: 0 auto; display: block')
+              h2 Paco Maestre Torreblanca
+              p
+                | Soy estudiante de Grado en Ingeniería Informática en la Univerisdad de Cádiz. Mi especialidad es la Computación. En mi tiempo libre me gusta leerme reglamentos e invocarlos contra todos aquellos profesores que no los cumplan.
+
+            .col-lg-6
+              img.img-circle(src='./images/foto_migue.png', style='width: 140px; height: 140px;margin: 0 auto; display: block')
+              h2 Miguel Castillo Lloret
+              p
+                | Otro estudiante del Grado en Ingeniería Informática, especialidad Computación. Cuando Paco no me esta amenazando con normativas para que trabaje me gusta hacer maquetas de robots y montar ordenadores que parecen transformers.
+            h3
+                | Entretenimiento para tontos
+            center
+              form(onsubmit='return false', oninput='o.value = parseInt(a.value) + parseInt(b.value)')
+                input(name='a', type='number', step='any')
+                p +
+                input(name='b', type='number', step='any')
+                p =
+                output(name='o')
+
+      script(src="/javascripts/jquery.js")
+      script(src="/javascripts/view.acerca.js")
+      include footer

@@ -1,0 +1,27 @@
+extends header
+block content
+      .jumbotron
+        h3 Formulario de Contacto
+        form.form-horizontal(name='commentform', method='post', action='send_form_email.php')
+            .form-group
+              label.control-label.col-md-4(for='first_name') Nombre
+              .col-md-6
+                input#first_name.form-control(type='text', name='first_name', placeholder='Nombre', required)
+            .form-group
+              label.control-label.col-md-4(for='last_name') Apellidos
+              .col-md-6
+                input#last_name.form-control(type='text', name='last_name', placeholder='Apellidos', required)
+            .form-group
+              label.control-label.col-md-4(for='email') Dirección Email
+              .col-md-6
+                input#email.form-control(type='email', name='email', placeholder='Dirección Email', required)
+            .form-group
+              label.control-label.col-md-4(for='comment') Pregunta o Comentario
+              .col-md-6
+                textarea#comments.form-control(rows='6', name='comments', placeholder='Te pregunta o comentario aquí')
+            .form-group
+              .col-md-6
+                button.btn.btn-custom.pull-right(type='submit', value='Submit') Enviar
+      script(src="/javascripts/jquery.js")
+      script(src="/javascripts/view.contacto.js")
+      include footer
