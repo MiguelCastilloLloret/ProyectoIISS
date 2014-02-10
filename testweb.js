@@ -41,7 +41,6 @@ zombie.visit("http://pacific-dawn-9912.herokuapp.com/nueva", function(err,zombie
 	assert(zombie.query('textarea #recuadro', form),'tiene campo de frase');
 	assert(zombie.query('div #nueva_frase', form),'tiene boton');
 	assert.equal(form.method, 'POST', 'uses POST method');
-	assert.equal(form.action, '#', 'posts to #');
 	done();
 });
 });
